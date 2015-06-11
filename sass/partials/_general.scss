@@ -2,12 +2,12 @@ html,body{
 	font-family:$font-base;
 }
 .sh-keyboard{
-  border:3px solid #359;
+  border:3px solid $color-1;
   position:fixed;
   bottom:0px;
   width:100%;
   left:0px;
-  background:#359;
+  background:$color-1;
 
   @media(min-width:$screen-sm-min){
   	position:relative;
@@ -26,7 +26,7 @@ html,body{
   	}
 
   	.sh-key.capslock-key{
-  		background:#58A;
+  		background:$color-2;
   	}
   }
 
@@ -40,14 +40,11 @@ html,body{
   		}
 
   		&.shift-key{
-  			background:#58A;
+  			background:$color-2;
   		}
   	}
   }
 }
-
-
-
 
 .sh-keyboard-input{
 	padding:3px 2px;
@@ -101,18 +98,18 @@ html,body{
 	float:left;
 	box-sizing:border-box;
 	padding:5px 2px;
-	border:1px solid #359;
+	border:1px solid $color-1;
 	font-size:10px;
 	text-align:center;
 	cursor:pointer;
 	background: rgba(183,222,237,1);
-background: -moz-linear-gradient(top, rgba(183,222,237,1) 0%, rgba(33,180,226,1) 50%, rgba(113,206,239,1) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(183,222,237,1)), color-stop(50%, rgba(33,180,226,1)), color-stop(100%, rgba(113,206,239,1)));
-background: -webkit-linear-gradient(top, rgba(183,222,237,1) 0%, rgba(33,180,226,1) 50%, rgba(113,206,239,1) 100%);
-background: -o-linear-gradient(top, rgba(183,222,237,1) 0%, rgba(33,180,226,1) 50%, rgba(113,206,239,1) 100%);
-background: -ms-linear-gradient(top, rgba(183,222,237,1) 0%, rgba(33,180,226,1) 50%, rgba(113,206,239,1) 100%);
-background: linear-gradient(to bottom, rgba(183,222,237,1) 0%, rgba(33,180,226,1) 50%, rgba(113,206,239,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', endColorstr='#71ceef', GradientType=0 );
+	background: -moz-linear-gradient(top, rgba(183,222,237,1) 0%, rgba(33,180,226,1) 50%, rgba(113,206,239,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(183,222,237,1)), color-stop(50%, rgba(33,180,226,1)), color-stop(100%, rgba(113,206,239,1)));
+	background: -webkit-linear-gradient(top, rgba(183,222,237,1) 0%, rgba(33,180,226,1) 50%, rgba(113,206,239,1) 100%);
+	background: -o-linear-gradient(top, rgba(183,222,237,1) 0%, rgba(33,180,226,1) 50%, rgba(113,206,239,1) 100%);
+	background: -ms-linear-gradient(top, rgba(183,222,237,1) 0%, rgba(33,180,226,1) 50%, rgba(113,206,239,1) 100%);
+	background: linear-gradient(to bottom, rgba(183,222,237,1) 0%, rgba(33,180,226,1) 50%, rgba(113,206,239,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', endColorstr='#71ceef', GradientType=0 );
 	overflow:hidden;
 	height:24px;
 	border-radius:5px;
@@ -120,7 +117,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', end
 	@media(min-width:$screen-sm-min){
 		padding:15px 2px;
 		height:44px;
-		border:2px solid #359;
+		border:2px solid $color-1;
 	}
 
 	&.capslock-key,&.backspace-key{
@@ -143,6 +140,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', end
 }
 
 .sh-key:active{
-	background:#58A;
+	background:$color-2;
 }
 

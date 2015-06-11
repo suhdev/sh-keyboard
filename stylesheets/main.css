@@ -67,12 +67,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 1, ../sass/partials/_layout.scss */
+/* line 1, ../sass/partials/_general.scss */
 html, body {
   font-family: "Roboto", sans-serif;
 }
 
-/* line 4, ../sass/partials/_layout.scss */
+/* line 4, ../sass/partials/_general.scss */
 .sh-keyboard {
   border: 3px solid #359;
   position: fixed;
@@ -82,7 +82,7 @@ html, body {
   background: #359;
 }
 @media (min-width: 600px) {
-  /* line 4, ../sass/partials/_layout.scss */
+  /* line 4, ../sass/partials/_general.scss */
   .sh-keyboard {
     position: relative;
     bottom: auto;
@@ -90,42 +90,42 @@ html, body {
     left: auto;
   }
 }
-/* line 19, ../sass/partials/_layout.scss */
+/* line 19, ../sass/partials/_general.scss */
 .sh-keyboard .sh-alt {
   display: none;
 }
-/* line 24, ../sass/partials/_layout.scss */
+/* line 24, ../sass/partials/_general.scss */
 .sh-keyboard.capslock .sh-key.sh-char-key {
   text-transform: uppercase;
 }
-/* line 28, ../sass/partials/_layout.scss */
+/* line 28, ../sass/partials/_general.scss */
 .sh-keyboard.capslock .sh-key.capslock-key {
   background: #58A;
 }
-/* line 35, ../sass/partials/_layout.scss */
+/* line 35, ../sass/partials/_general.scss */
 .sh-keyboard.alt .sh-key .sh-base {
   display: none;
 }
-/* line 38, ../sass/partials/_layout.scss */
+/* line 38, ../sass/partials/_general.scss */
 .sh-keyboard.alt .sh-key .sh-alt {
   display: inline;
 }
-/* line 42, ../sass/partials/_layout.scss */
+/* line 42, ../sass/partials/_general.scss */
 .sh-keyboard.alt .sh-key.shift-key {
   background: #58A;
 }
 
-/* line 52, ../sass/partials/_layout.scss */
+/* line 49, ../sass/partials/_general.scss */
 .sh-keyboard-input {
   padding: 3px 2px;
 }
 
-/* line 56, ../sass/partials/_layout.scss */
+/* line 53, ../sass/partials/_general.scss */
 .sh-key-line {
   margin: 0px -2px;
 }
 
-/* line 60, ../sass/partials/_layout.scss */
+/* line 57, ../sass/partials/_general.scss */
 .sh-keyboard-input .sh-keyboard-textarea {
   resize: none;
   width: 100%;
@@ -144,7 +144,7 @@ html, body {
   border-radius: 5px;
 }
 
-/* line 78, ../sass/partials/_layout.scss */
+/* line 75, ../sass/partials/_general.scss */
 .sh-keys-row {
   margin: 0px;
   -webkit-user-select: none;
@@ -152,13 +152,13 @@ html, body {
   -ms-user-select: none;
   user-select: none;
 }
-/* line 85, ../sass/partials/_layout.scss */
+/* line 82, ../sass/partials/_general.scss */
 .sh-keys-row:before {
   content: ' ';
   display: table;
   box-sizing: border-box;
 }
-/* line 91, ../sass/partials/_layout.scss */
+/* line 88, ../sass/partials/_general.scss */
 .sh-keys-row:after {
   clear: both;
   display: table;
@@ -166,7 +166,7 @@ html, body {
   box-sizing: border-box;
 }
 
-/* line 100, ../sass/partials/_layout.scss */
+/* line 97, ../sass/partials/_general.scss */
 .sh-key {
   float: left;
   box-sizing: border-box;
@@ -189,33 +189,33 @@ html, body {
   color: white;
 }
 @media (min-width: 600px) {
-  /* line 100, ../sass/partials/_layout.scss */
+  /* line 97, ../sass/partials/_general.scss */
   .sh-key {
     padding: 15px 2px;
     height: 44px;
     border: 2px solid #359;
   }
 }
-/* line 127, ../sass/partials/_layout.scss */
+/* line 124, ../sass/partials/_general.scss */
 .sh-key.capslock-key .sh-base, .sh-key.backspace-key .sh-base {
   display: none;
 }
-/* line 130, ../sass/partials/_layout.scss */
+/* line 127, ../sass/partials/_general.scss */
 .sh-key.capslock-key .sh-alt, .sh-key.backspace-key .sh-alt {
   display: inline;
 }
 @media (min-width: 600px) {
-  /* line 135, ../sass/partials/_layout.scss */
+  /* line 132, ../sass/partials/_general.scss */
   .sh-key.capslock-key .sh-base, .sh-key.backspace-key .sh-base {
     display: inline;
   }
-  /* line 138, ../sass/partials/_layout.scss */
+  /* line 135, ../sass/partials/_general.scss */
   .sh-key.capslock-key .sh-alt, .sh-key.backspace-key .sh-alt {
     display: none;
   }
 }
 
-/* line 145, ../sass/partials/_layout.scss */
+/* line 142, ../sass/partials/_general.scss */
 .sh-key:active {
   background: #58A;
 }
