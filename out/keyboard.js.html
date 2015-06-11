@@ -26,9 +26,216 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>(function($){
+            <pre class="prettyprint source linenums"><code>/** 
+ * This file provides the ANSI layout of the keyboard, which is the default layout. 
+ * Separating the layout from the logic helps in supporting other keyboard layouts. 
+ */ 
+(function(w){
+var baseLayout = [
+    [{
+        "base": "`",
+        "alt": "~"
+    }, {
+        "base": "1",
+        "alt": "!"
+    }, {
+        "base": "2",
+        "alt": "@"
+    }, {
+        "base": "3",
+        "alt": "#"
+    }, {
+        "base": "4",
+        "alt": "$"
+    }, {
+        "base": "5",
+        "alt": "%"
+    }, {
+        "base": "6",
+        "alt": "^"
+    }, {
+        "base": "7",
+        "alt": "&amp;"
+    }, {
+        "base": "8",
+        "alt": "*"
+    }, {
+        "base": "9",
+        "alt": "("
+    }, {
+        "base": "0",
+        "alt": ")"
+    }, {
+        "base": "-",
+        "alt": "_"
+    }, {
+        "base": "=",
+        "alt": "+"
+    }, {
+        "base": "Backspace",
+        "alt": "DEL",
+        "ctrl": true,
+        "keyCode": "Backspace",
+        "className":"backspace-key",
+        "keySize":5
+    }],
+    [{
+        "base": "Tab",
+        "alt": "Tab",
+        "ctrl": true,
+        "keyCode": "Tab",
+        "className":"tab-key",
+        "keySize":3
+    }, {
+        "base": "q",
+        "alt": "Q"
+    }, {
+        "base": "w",
+        "alt": "W"
+    }, {
+        "base": "e",
+        "alt": "E"
+    }, {
+        "base": "r",
+        "alt": "R"
+    }, {
+        "base": "t",
+        "alt": "T"
+    }, {
+        "base": "y",
+        "alt": "Y"
+    }, {
+        "base": "u",
+        "alt": "U"
+    }, {
+        "base": "i",
+        "alt": "I"
+    }, {
+        "base": "o",
+        "alt": "O"
+    }, {
+        "base": "p",
+        "alt": "P"
+    }, {
+        "base": "[",
+        "alt": "{"
+    }, {
+        "base": "]",
+        "alt": "}"
+    }, {
+        "base": "\\",
+        "alt": "|",
+        "keySize":3
+    }],
+    [{
+        "base": "Caps Lock",
+        "alt": "CAPS",
+        "ctrl": true,
+        "keyCode": "CapsLock",
+        "className":"capslock-key",
+        "keySize":4
+    }, {
+        "base": "a",
+        "alt": "A"
+    }, {
+        "base": "s",
+        "alt": "S"
+    }, {
+        "base": "d",
+        "alt": "D"
+    }, {
+        "base": "f",
+        "alt": "F"
+    }, {
+        "base": "g",
+        "alt": "G"
+    }, {
+        "base": "h",
+        "alt": "H"
+    }, {
+        "base": "j",
+        "alt": "J"
+    }, {
+        "base": "k",
+        "alt": "K"
+    }, {
+        "base": "l",
+        "alt": "L"
+    }, {
+        "base": ";",
+        "alt": ":"
+    }, {
+        "base": "'",
+        "alt": "\""
+    }, {
+        "base": "Enter",
+        "alt": "Enter",
+        "ctrl": true,
+        "keySize":"6",
+        "keyCode": "Enter",
+        "className":"enter-key"
+    }],
+    [{
+        "base": "Shift",
+        "alt": "Shift",
+        "ctrl": true,
+        "keySize":"6",
+        "keyCode": "Shift",
+        "className":"shift-key"
+    }, {
+        "base": "z",
+        "alt": "Z"
+    }, {
+        "base": "x",
+        "alt": "X"
+    }, {
+        "base": "c",
+        "alt": "C"
+    }, {
+        "base": "v",
+        "alt": "V"
+    }, {
+        "base": "b",
+        "alt": "B"
+    }, {
+        "base": "n",
+        "alt": "N"
+    }, {
+        "base": "m",
+        "alt": "M"
+    }, {
+        "base": ",",
+        "alt": "&lt;"
+    }, {
+        "base": ".",
+        "alt": ">"
+    }, {
+        "base": "/",
+        "alt": "?"
+    }, {
+        "base": "Shift",
+        "alt": "Shift",
+        "ctrl": true,
+        "keyCode": "Shift",
+        "keySize":"8",
+        "className":"shift-key"
+    }],
+    [{
+        "base": "Space",
+        "alt": "Space",
+        "ctrl":true,
+        "keySize":"10",
+        "keyCode": "Space",
+        "className":"space-key"
+    }]
+]; 
+w.shDefaultLayout = baseLayout;
+})(window); 
+(function($){
 /**
  * @name Keyboard
+ * @author Suhail Abood
+ * @version 0.1.0 
  * @constructor
  * @param {object} opts the options to use to initialize the instance. 
  * @property {object} element a reference to the root DOM element of the keyboard instance. 
@@ -42,13 +249,14 @@
  */ 
 var Keyboard = function(opts){
 	//@todo setup some defaults such as default selectors, etc. 
-  var defaults = {}; 
+  var defaults = {},
+  	self = this; 
   this.options = $.extend({},defaults,opts); 
   this.element = this.options.element || null;
   this.element = this.element &amp;&amp; jQuery(this.element); 
   this.capsLock = false;
   this.shift = false;
-  this.layout = this.options.layout || baseLayout;  
+  this.layout = this.options.layout || shDefaultLayout;
 };
 
 Keyboard.prototype = {
@@ -188,6 +396,17 @@ Keyboard.prototype = {
   	this.render(parent); 
   },
   /**
+   * @name Keyboard#dispose
+   * @description
+   * Disposes of the Keyboard instance, by removing the root element. 
+   * @todo Make sure everything is cleaned up 
+   */
+  dispose:function(){
+  	if (this.element){
+  		this.element.remove(); 
+  	}
+  },
+  /**
    * @name Keyboard#render
    * @param {DOMElement} [parentEl] the parentElement to attach the keyboard instance to. 
    * @description 
@@ -210,6 +429,10 @@ Keyboard.prototype = {
           .attr('readonly','readonly')))
       .appendTo(p); 
 
+    //keep a reference within the root element to the keyboard instance
+    //this is helpful for in-browser debugging (using $0) 
+    this.element.data('__SH_KEYBOARD__',this); 
+
     //loop through the rows to generate the keyboard 
     for(i=0,l=this.layout.length;i&lt;l;i++){
       row = $('&lt;div>')
@@ -221,6 +444,7 @@ Keyboard.prototype = {
           .data(kkey)
           .addClass('sh-key')
           .addClass(kkey.ctrl?'sh-ctrl-key':'sh-char-key')
+          .addClass(kkey.className?kkey.className:'sh-no-class')
           .attr('key-size',kkey.keySize||'1')
           .append($('&lt;span>')
             .addClass('sh-base')
@@ -235,6 +459,8 @@ Keyboard.prototype = {
     this._attachEvents();
   }
 }; 
+
+window.shKeyboard = Keyboard; 
 })(jQuery); </code></pre>
         </article>
     </section>
@@ -251,7 +477,7 @@ Keyboard.prototype = {
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0</a> on Thu Jun 11 2015 02:15:18 GMT+0100 (BST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0</a> on Thu Jun 11 2015 03:21:44 GMT+0100 (BST)
 </footer>
 
 <script> prettyPrint(); </script>

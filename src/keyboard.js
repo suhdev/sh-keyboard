@@ -57,14 +57,16 @@ Keyboard.prototype = {
         if((this.selectionEnd-this.selectionStart) > 0){
         	//in case there is a selection, delete everything selected 
           k.splice(this.selectionStart,(this.selectionEnd-this.selectionStart));
-        }else{
+        }else if (this.selectionStart > 0){
         	//if no selection, then delete the character thats just before the cursor 
-          k.splice(this.selectionStart-1,1); 
+          k.splice(this.selectionStart-1,1);
+
         }
         //reconstruct the text again 
         $(this).val(k.join('')); 
+        this.selectionStart = this.selectionEnd = (st-1)>0?st-1:0; 
         //set the selection to be one place before the previous position 
-        this.selectionStart = this.selectionEnd = st-1;
+        
         //end of special handling, early exit 
         return;
       }

@@ -1,3 +1,7 @@
+/** 
+ * This file provides the ANSI layout of the keyboard, which is the default layout. 
+ * Separating the layout from the logic helps in supporting other keyboard layouts. 
+ */ 
 (function(w){
 var baseLayout = [
     [{
