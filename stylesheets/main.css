@@ -1,0 +1,321 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 1, ../sass/partials/_layout.scss */
+html, body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* line 4, ../sass/partials/_layout.scss */
+.sh-keyboard {
+  border: 3px solid #359;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  left: 0px;
+  background: #359;
+}
+@media (min-width: 600px) {
+  /* line 4, ../sass/partials/_layout.scss */
+  .sh-keyboard {
+    position: relative;
+    bottom: auto;
+    width: auto;
+    left: auto;
+  }
+}
+/* line 19, ../sass/partials/_layout.scss */
+.sh-keyboard .sh-alt {
+  display: none;
+}
+/* line 24, ../sass/partials/_layout.scss */
+.sh-keyboard.capslock .sh-key.sh-char-key {
+  text-transform: uppercase;
+}
+/* line 28, ../sass/partials/_layout.scss */
+.sh-keyboard.capslock .sh-key.capslock-key {
+  background: #58A;
+}
+/* line 35, ../sass/partials/_layout.scss */
+.sh-keyboard.alt .sh-key .sh-base {
+  display: none;
+}
+/* line 38, ../sass/partials/_layout.scss */
+.sh-keyboard.alt .sh-key .sh-alt {
+  display: inline;
+}
+/* line 42, ../sass/partials/_layout.scss */
+.sh-keyboard.alt .sh-key.shift-key {
+  background: #58A;
+}
+
+/* line 52, ../sass/partials/_layout.scss */
+.sh-keyboard-input {
+  padding: 3px 2px;
+}
+
+/* line 56, ../sass/partials/_layout.scss */
+.sh-key-line {
+  margin: 0px -2px;
+}
+
+/* line 60, ../sass/partials/_layout.scss */
+.sh-keyboard-input .sh-keyboard-textarea {
+  resize: none;
+  width: 100%;
+  min-height: 100px;
+  outline: none;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  font-size: 12px;
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 78, ../sass/partials/_layout.scss */
+.sh-keys-row {
+  margin: 0px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* line 85, ../sass/partials/_layout.scss */
+.sh-keys-row:before {
+  content: ' ';
+  display: table;
+  box-sizing: border-box;
+}
+/* line 91, ../sass/partials/_layout.scss */
+.sh-keys-row:after {
+  clear: both;
+  display: table;
+  content: " ";
+  box-sizing: border-box;
+}
+
+/* line 100, ../sass/partials/_layout.scss */
+.sh-key {
+  float: left;
+  box-sizing: border-box;
+  padding: 5px 2px;
+  border: 1px solid #359;
+  font-size: 10px;
+  text-align: center;
+  cursor: pointer;
+  background: #b7deed;
+  background: -moz-linear-gradient(top, #b7deed 0%, #21b4e2 50%, #71ceef 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #b7deed), color-stop(50%, #21b4e2), color-stop(100%, #71ceef));
+  background: -webkit-linear-gradient(top, #b7deed 0%, #21b4e2 50%, #71ceef 100%);
+  background: -o-linear-gradient(top, #b7deed 0%, #21b4e2 50%, #71ceef 100%);
+  background: -ms-linear-gradient(top, #b7deed 0%, #21b4e2 50%, #71ceef 100%);
+  background: linear-gradient(to bottom, #b7deed 0%, #21b4e2 50%, #71ceef 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', endColorstr='#71ceef', GradientType=0 );
+  overflow: hidden;
+  height: 24px;
+  border-radius: 5px;
+  color: white;
+}
+@media (min-width: 600px) {
+  /* line 100, ../sass/partials/_layout.scss */
+  .sh-key {
+    padding: 15px 2px;
+    height: 44px;
+    border: 2px solid #359;
+  }
+}
+/* line 127, ../sass/partials/_layout.scss */
+.sh-key.capslock-key .sh-base, .sh-key.backspace-key .sh-base {
+  display: none;
+}
+/* line 130, ../sass/partials/_layout.scss */
+.sh-key.capslock-key .sh-alt, .sh-key.backspace-key .sh-alt {
+  display: inline;
+}
+@media (min-width: 600px) {
+  /* line 135, ../sass/partials/_layout.scss */
+  .sh-key.capslock-key .sh-base, .sh-key.backspace-key .sh-base {
+    display: inline;
+  }
+  /* line 138, ../sass/partials/_layout.scss */
+  .sh-key.capslock-key .sh-alt, .sh-key.backspace-key .sh-alt {
+    display: none;
+  }
+}
+
+/* line 145, ../sass/partials/_layout.scss */
+.sh-key:active {
+  background: #58A;
+}
+
+/* line 4, ../sass/partials/_grid.scss */
+.sh-key-1 {
+  width: 6.66667%;
+}
+
+/* line 8, ../sass/partials/_grid.scss */
+.sh-key[key-size="1"] {
+  width: 6.66667%;
+}
+
+/* line 4, ../sass/partials/_grid.scss */
+.sh-key-2 {
+  width: 8.33333%;
+}
+
+/* line 8, ../sass/partials/_grid.scss */
+.sh-key[key-size="2"] {
+  width: 8.33333%;
+}
+
+/* line 4, ../sass/partials/_grid.scss */
+.sh-key-3 {
+  width: 10%;
+}
+
+/* line 8, ../sass/partials/_grid.scss */
+.sh-key[key-size="3"] {
+  width: 10%;
+}
+
+/* line 4, ../sass/partials/_grid.scss */
+.sh-key-4 {
+  width: 11.66667%;
+}
+
+/* line 8, ../sass/partials/_grid.scss */
+.sh-key[key-size="4"] {
+  width: 11.66667%;
+}
+
+/* line 4, ../sass/partials/_grid.scss */
+.sh-key-5 {
+  width: 13.33333%;
+}
+
+/* line 8, ../sass/partials/_grid.scss */
+.sh-key[key-size="5"] {
+  width: 13.33333%;
+}
+
+/* line 4, ../sass/partials/_grid.scss */
+.sh-key-6 {
+  width: 15%;
+}
+
+/* line 8, ../sass/partials/_grid.scss */
+.sh-key[key-size="6"] {
+  width: 15%;
+}
+
+/* line 4, ../sass/partials/_grid.scss */
+.sh-key-7 {
+  width: 16.66667%;
+}
+
+/* line 8, ../sass/partials/_grid.scss */
+.sh-key[key-size="7"] {
+  width: 16.66667%;
+}
+
+/* line 4, ../sass/partials/_grid.scss */
+.sh-key-8 {
+  width: 18.33333%;
+}
+
+/* line 8, ../sass/partials/_grid.scss */
+.sh-key[key-size="8"] {
+  width: 18.33333%;
+}
+
+/* line 4, ../sass/partials/_grid.scss */
+.sh-key-9 {
+  width: 93.33333%;
+}
+
+/* line 8, ../sass/partials/_grid.scss */
+.sh-key[key-size="9"] {
+  width: 93.33333%;
+}
+
+/* line 4, ../sass/partials/_grid.scss */
+.sh-key-10 {
+  width: 100%;
+}
+
+/* line 8, ../sass/partials/_grid.scss */
+.sh-key[key-size="10"] {
+  width: 100%;
+}

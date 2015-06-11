@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Welcome to keyboard.dev</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="/keyboard.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+    <script type="text/javascript">
+    jQuery(document).ready(function(){
+      var keyboard = new shKeyboard(); 
+      keyboard.render($('#keyboard-container')); 
+    });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div id="keyboard-container" class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
+
+        </div>
+      </div>
+    </div>
+</body>
+</html>

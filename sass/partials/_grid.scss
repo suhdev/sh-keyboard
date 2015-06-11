@@ -1,0 +1,11 @@
+$key-sizes: 6.6666666667% , 8.3333333333% , 10% , 11.6666666667% , 13.3333333333% , 15% , 16.6666666667% , 18.3333333333% , 93.3333333333% , 100%;
+$colsize:100% / $no-columns;
+@for $i from 1 through length($key-sizes) {
+	.sh-key-#{$i}{
+		width:nth($key-sizes,$i); 
+	}
+
+	.sh-key[key-size="#{$i}"]{
+		width:nth($key-sizes,$i);
+	}
+}

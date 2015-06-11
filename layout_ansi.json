@@ -1,0 +1,190 @@
+[
+    [{
+        "base": "`",
+        "alt": "~"
+    }, {
+        "base": "1",
+        "alt": "!"
+    }, {
+        "base": "2",
+        "alt": "@"
+    }, {
+        "base": "3",
+        "alt": "#"
+    }, {
+        "base": "4",
+        "alt": "$"
+    }, {
+        "base": "5",
+        "alt": "%"
+    }, {
+        "base": "6",
+        "alt": "^"
+    }, {
+        "base": "7",
+        "alt": "&"
+    }, {
+        "base": "8",
+        "alt": "*"
+    }, {
+        "base": "9",
+        "alt": "("
+    }, {
+        "base": "0",
+        "alt": ")"
+    }, {
+        "base": "-",
+        "alt": "_"
+    }, {
+        "base": "=",
+        "alt": "+"
+    }, {
+        "base": "Backspace",
+        "alt": "Backspace",
+        "ctrl": true,
+        "keyCode": 13,
+        "keySize":5
+    }],
+    [{
+        "base": "Tab",
+        "alt": "Tab",
+        "ctrl": true,
+        "keyCode": 9,
+        "keySize":3
+    }, {
+        "base": "q",
+        "alt": "Q"
+    }, {
+        "base": "w",
+        "alt": "W"
+    }, {
+        "base": "e",
+        "alt": "E"
+    }, {
+        "base": "r",
+        "alt": "R"
+    }, {
+        "base": "t",
+        "alt": "T"
+    }, {
+        "base": "y",
+        "alt": "Y"
+    }, {
+        "base": "u",
+        "alt": "U"
+    }, {
+        "base": "i",
+        "alt": "I"
+    }, {
+        "base": "o",
+        "alt": "O"
+    }, {
+        "base": "p",
+        "alt": "P"
+    }, {
+        "base": "[",
+        "alt": "{"
+    }, {
+        "base": "]",
+        "alt": "}"
+    }, {
+        "base": "\\",
+        "alt": "|",
+        "keySize":3
+    }],
+    [{
+        "base": "Caps Lock",
+        "alt": "Caps Lock",
+        "ctrl": true,
+        "keyCode": "CAPSLOCK",
+        "keySize":4
+    }, {
+        "base": "a",
+        "alt": "A"
+    }, {
+        "base": "s",
+        "alt": "S"
+    }, {
+        "base": "d",
+        "alt": "D"
+    }, {
+        "base": "f",
+        "alt": "F"
+    }, {
+        "base": "g",
+        "alt": "G"
+    }, {
+        "base": "h",
+        "alt": "H"
+    }, {
+        "base": "j",
+        "alt": "J"
+    }, {
+        "base": "k",
+        "alt": "K"
+    }, {
+        "base": "l",
+        "alt": "L"
+    }, {
+        "base": ";",
+        "alt": ":"
+    }, {
+        "base": "'",
+        "alt": "\""
+    }, {
+        "base": "Enter",
+        "alt": "Enter",
+        "ctrl": true,
+        "keySize":"6",
+        "keyCode": 10
+    }],
+    [{
+        "base": "Shift",
+        "alt": "Shift",
+        "ctrl": true,
+        "keySize":"6",
+        "keyCode": "Shift"
+    }, {
+        "base": "z",
+        "alt": "Z"
+    }, {
+        "base": "x",
+        "alt": "X"
+    }, {
+        "base": "c",
+        "alt": "C"
+    }, {
+        "base": "v",
+        "alt": "V"
+    }, {
+        "base": "b",
+        "alt": "B"
+    }, {
+        "base": "n",
+        "alt": "N"
+    }, {
+        "base": "m",
+        "alt": "M"
+    }, {
+        "base": ",",
+        "alt": "<"
+    }, {
+        "base": ".",
+        "alt": ">"
+    }, {
+        "base": "/",
+        "alt": "?"
+    }, {
+        "base": "Shift",
+        "alt": "Shift",
+        "ctrl": true,
+        "keyCode": "Shift",
+        "keySize":"8"
+    }],
+    [{
+        "base": "Space",
+        "alt": "Space",
+        "keySize":"10",
+        "keyCode": 32
+    }]
+]
